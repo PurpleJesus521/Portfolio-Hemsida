@@ -1,0 +1,51 @@
+/*Bild på min kanin*/
+img {
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360;
+    max-height: 100%;
+}   
+
+.tabcontent{
+display: none;
+}
+
+/*Header*/
+h1 {
+    text-align: center;
+}
+
+/*Konfigurerar listans utseende med bakgrund och rundade kanter*/
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-image: linear-gradient(rgb(28, 26, 26),rgb(87, 80, 80));
+border-radius: 25px;
+}
+
+/*Konfigurerar listobjektens utseende med text och separerande linje*/
+li {
+float:left;
+}
+
+.tablinks{
+color: white;
+text-align: center;
+padding-top: 15px;
+padding-bottom: 15px;
+text-decoration: none;
+width:25%;
+}
+
+/*Highlightar knappen man håller över genom att byta dess färg*/
+li :hover {
+background-color: rgb(108, 102, 102);
+}
+/*Visar vilket alternativ man redan är på med en unik färg*/
+.active {
+background-color: rgb(108, 102, 102);;
+}  
