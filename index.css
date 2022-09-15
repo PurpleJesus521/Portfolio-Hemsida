@@ -28,8 +28,11 @@ border-radius: 25px;
 }
 
 /*Konfigurerar listobjektens utseende med text och separerande linje*/
-li {
+button {
 float:left;
+border: none;
+outline: none;
+background-color: inherit;
 }
 
 .tablinks{
@@ -42,7 +45,7 @@ width:25%;
 }
 
 /*Highlightar knappen man håller över genom att byta dess färg*/
-li :hover {
+button :hover {
 background-color: rgb(108, 102, 102);
 }
 /*Visar vilket alternativ man redan är på med en unik färg*/
