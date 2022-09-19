@@ -4,34 +4,35 @@
 <script src="index.js">
 </script>
     <body>
-        <nav>
-            <ul>
+        <div class="maincontent">
+            <div class="navbar">  
                 <button class="tablinks" onclick="openTab(event, 'Hem')" id="defaultOpen">Hem</button>
                 <button class="tablinks" onclick="openTab(event, 'Projekt')">Mina projekt</button>
                 <button class="tablinks" onclick="openTab(event, 'Om mig')">Om mig</button>
                 <button class="tablinks" onclick="openTab(event, 'Kontakt')">Kontakt</button>
-            </ul>
-        </nav>
+            </div>
+            
+            <div class="tabdiv">
+                <div id="Hem" class="tabcontent">
+                    <h1>Kanin</h1>
+                    <img src="Kanin.jpg" class="kaninbild" alt="Bild på en kanin">
+                </div>
+                <div id="Projekt" class="tabcontent">
+                    <h1>Mina Projekt</h1>
+                    <img src="Kanin.jpg" class="kaninbild" alt="Bild på en kanin">
+                </div>
+
+                <div id="Om mig" class="tabcontent">
+                    <h1>Om mig</h1>
+                    <img src="Kanin.jpg" class="kaninbild" alt="Bild på en kanin">
+                </div>
+
+                <div id="Kontakt" class="tabcontent">
+                    <h1>Kontaktinfo</h1>
+                </div>
+            </div>
+
+        </div>
     </body>
-        <div id="Hem" class="tabcontent">
-            <h1>Kanin</h1>
-            <img src="Kanin.jpg" alt="Bild på en kanin">
-        </div>
-
-        <div id="Projekt" class="tabcontent">
-            <h1>Mina Projekt</h1>
-            <img src="Kanin.jpg" alt="Bild på en kanin">
-        </div>
-
-        <div id="Om mig" class="tabcontent">
-            <h1>Om mig</h1>
-            <img src="Kanin.jpg" alt="Bild på en kanin">
-        </div>
-
-        <div id="Kontakt" class="tabcontent">
-            <h1>Kontaktinfo</h1>
-        </div>
-
-        <script> document.getElementById("defaultOpen").click();
-        </script>
+<script> document.getElementById("defaultOpen").click();</script>
 </html>
