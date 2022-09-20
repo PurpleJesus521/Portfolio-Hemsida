@@ -4,34 +4,46 @@
 <script src="index.js">
 </script>
     <body>
-        <div class="maincontent">
-            <div class="navbar">  
-                <button class="tablinks" onclick="openTab(event, 'Hem')" id="defaultOpen">Hem</button>
-                <button class="tablinks" onclick="openTab(event, 'Projekt')">Mina projekt</button>
-                <button class="tablinks" onclick="openTab(event, 'Om mig')">Om mig</button>
-                <button class="tablinks" onclick="openTab(event, 'Kontakt')">Kontakt</button>
+        <div class="hero-image">
+            <div class="hero-image__text">
+                <h1>Me rabbit</h1>
+                <p>bals</p>
             </div>
-            
-            <div class="tabdiv">
+        </div>
+
+        <div class="main-content">
+            <div class="nav-bar">  
+                <button class="nav-bar__tab" onclick="openTab(event, 'Hem')" id="defaultOpen">Hem</button>
+                <button class="nav-bar__tab" onclick="openTab(event, 'Projekt')">Mina projekt</button>
+                <button class="nav-bar__tab" onclick="openTab(event, 'Om mig')">Om mig</button>
+                <button class="nav-bar__tab" onclick="openTab(event, 'Kontakt')">Kontakt</button>
+                <button class="nav-bar__tab" onclick="openTab(event, 'Kanin bilder')">Kanin bilder</button>
+            </div>
+
+            <div class="page-content">
                 <div id="Hem" class="tabcontent">
                     <h1>Kanin</h1>
-                    <img src="Kanin.jpg" class="kaninbild" alt="Bild på en kanin">
+                    <img src="Kanin.jpg" class="kanin-bild" alt="Bild på en kanin">
                 </div>
                 <div id="Projekt" class="tabcontent">
                     <h1>Mina Projekt</h1>
-                    <img src="Kanin.jpg" class="kaninbild" alt="Bild på en kanin">
+                    <img src="Kanin.jpg" class="kanin-bild" alt="Bild på en kanin">
                 </div>
 
                 <div id="Om mig" class="tabcontent">
                     <h1>Om mig</h1>
-                    <img src="Kanin.jpg" class="kaninbild" alt="Bild på en kanin">
+                    <img src="Kanin.jpg" class="kanin-bild" alt="Bild på en kanin">
                 </div>
 
                 <div id="Kontakt" class="tabcontent">
                     <h1>Kontaktinfo</h1>
                 </div>
+                
+                <div id="Kanin bilder" class="tabcontent">
+                    <h1>Bilder på mina två kaniner</h1>
+                </div>
+                
             </div>
-
         </div>
     </body>
 <script> document.getElementById("defaultOpen").click();</script>

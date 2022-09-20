@@ -9,7 +9,7 @@ function openTab(evt,tabName){
     }
 
     //Tar alla element med classen "tabcontent" och tar bort classen "active"
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.getElementsByClassName("nav-bar__tab");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace("active", "");
     }
