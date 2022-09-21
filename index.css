@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 .hero-image {
@@ -22,17 +22,28 @@ body {
     color: white;
 }
 
+.page-container {
+    width:100%;
+    height: 50px;
+
+    background-color: rgb(28, 26, 26);
+}
+
 /*Header*/
 h1 {
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
 }   
 
 /*Bild på min kanin*/
 .kanin-bild {
     object-fit: contain;
     display: block;
-    max-width: 360;
+    max-width: 360px;
     max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }   
 
 .main-content{
@@ -72,8 +83,11 @@ button {
 .nav-bar__tab {
     color: white;
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;    
+    
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;   
 }
 
 /*Visar vilket alternativ man redan är på med en unik färg*/
