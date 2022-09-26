@@ -1,25 +1,9 @@
 <html lang="sv">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="index.css">
-<script src="index.js">
-
-$(document).ready(function(){
-    $(window).scrollTop(0);
-});
-
+<link rel="stylesheet" href="mainCss.css">
+<script src="mainJava.js">
 </script>
     <body>
-
-        <div class="hero-image">
-            <div class="hero-image__text">
-                <h1>Me rabbit</h1>
-                <p>bals</p>
-            </div>
-        </div>
-
-        <div class="page-container">
-        </div>
-
         <div class="main-content">
             <div class="nav-bar">  
                 <button class="nav-bar__tab" onclick="openTab(event, 'Hem')" id="defaultOpen">Hem</button>
@@ -30,13 +14,20 @@ $(document).ready(function(){
             </div>
 
             <div class="page-content">
+                
                 <div id="Hem" class="tabcontent">
-                    <h1>Kanin</h1>
-                    <img src="Bilder\Kanin.jpg" class="kanin-bild" alt="Bild på en söt, grå kanin">
+                    <div class="hero-image">
+                        <div class="hero-image__text">
+                            <h1>Me rabbit</h1>
+                            <p>bals</p>
+                        </div>
+                    </div>
                 </div>
+
                 <div id="Projekt" class="tabcontent">
                     <h1>Mina Projekt</h1>
-                    <img src="Bilder\Kanin.jpg" class="kanin-bild" alt="Bild på en söt, grå kanin">
+                    <img src="Bilder\Stampe5.jpeg" class="om-mig__kaninbild1" alt="Bild på en söt, grå kanin">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur saepe accusantium, dolores, excepturi quod ullam dignissimos ducimus facilis esse neque voluptatem sed qui earum in cumque magni quia nesciunt dolore?</p>
                 </div>
 
                 <div id="Om mig" class="tabcontent">
@@ -46,10 +37,26 @@ $(document).ready(function(){
 
                 <div id="Kontakt" class="tabcontent">
                     <h1>Kontaktinfo</h1>
+                    <img src="Bilder\Leonard1.JPG" class="kanin-bild" alt="Ough">
                 </div>
                 
                 <div id="Kanin bilder" class="tabcontent">
                     <h1>Bilder på mina två kaniner</h1>
+
+                    <div class="kanin-bilder">
+                        <div class="kanin-bilder__column">
+                            <img src="Bilder\Stampe1.jpg" alt="test">
+                        </div>
+
+                        <div class="kanin-bilder__column">
+                            <img src="Bilder\Stampe1.jpg" alt="test">
+                            <img src="Bilder\Stampe2.jpg" alt="test">
+                            <img src="Bilder\Stampe3.jpg" alt="test">
+
+                        </div>
+
+                    </div>
+
                 </div>
                 
             </div>
