@@ -12,12 +12,10 @@ img {
 
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Kanin.jpg");
-    height: 100%;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    height: auto;
+    width: 100px;
+    vertical-align: middle;
+    box-sizing: inherit;
 }
 
 .hero-image__text {
@@ -39,7 +37,7 @@ h1 {
 
 p {
     color:white;
-    margin-left: 4%;
+    margin-left: 5%;
     margin-right: 4%;
 }
 
@@ -71,6 +69,7 @@ p {
 .page-content {
     order: 2;
     flex-grow: 2;
+    margin-left: 20%;
 }
 
 .kanin-bilder{
@@ -97,12 +96,12 @@ p {
     display: flex;
     flex-direction: column;
     
-    position:sticky;
+    position:fixed;
     top: 0;
 
     max-width: 150px;
     width: 20%;
-    height: inherit;
+    height: 100%;
     
     background-image: linear-gradient(rgb(14, 13, 13),rgb(41, 41, 41));
 }
