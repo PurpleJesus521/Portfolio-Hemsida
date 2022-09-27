@@ -61,7 +61,6 @@ p {
     margin-right: auto;
 }
 .main-content{
-
     display:flex;
     flex-direction:row;
 }
@@ -76,7 +75,6 @@ p {
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
 .kanin-bilder__column {
@@ -86,7 +84,6 @@ p {
     max-width: 200px;
     width: 100%;
     margin-right: 2%;
-
 }
 
 /*Konfigurerar nav-barens utseende*/
@@ -99,7 +96,6 @@ p {
     position:fixed;
     top: 0;
 
-    max-width: 150px;
     width: 20%;
     height: 100%;
     
@@ -115,7 +111,10 @@ button {
 
 /*Konfigurerar innehållet i navbaren*/
 .nav-bar__tab {
+    font-size: 15px;
     color: white;
+    text-shadow: 2px 2px #343030;
+
     text-align: center;
     overflow: hidden;
     white-space: nowrap;    
@@ -126,5 +125,11 @@ button {
 
 /*Visar vilket alternativ man redan är på med en unik färg*/
 .active {
-    background-color: rgb(50, 47, 47);;
+    background-color: rgb(72, 68, 68);;
+    transition: 0.5s;
 }  
+
+button:hover {
+    background-color: rgb(50, 47, 47);;
+    transition: 0.3s;
+}
