@@ -1,16 +1,61 @@
+/*Tar bort den fula marginen runt hemsidan som finns*/
 body {
     padding: 0;
     margin: 0;
 }
 
+/*Ger en snygg övergående mörk bakgrund till hela hemsidan*/
 html {
     background-image: linear-gradient(black,rgb(24, 24, 24));
 }
 
+/*Globala utseenden som font och textstil. Gör texten mer lättläst med större*/
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+}
+
+/*Omsluter hela dokumentet med flexbox, så att navbaren och sidinnehållet läggs på rad oavsätt storlek.*/
+/*Ordningen och storleken är bestämd genom flexs egna 'grow' och 'order' funktionalitet.*/
+.main-content{
+    display:flex;
+    flex-direction:row;
+}
+
+/*Specifikt på sidans innehåll, och inte nav-baren. Gör att den tar upp all möjlig vertikal plats, men ger utrymme till nav-baren*/
+.page-content {
+    order: 2;
+    flex-grow: 2;
+    margin-left: 20%;
+    min-height: 100vh;
+}
+
+/*Headern med sidans titel, uppvisas i ett lådformat med en bakgrund för extra tydlighet.*/
+.header {
+    display: block;
+    background: rgb(24, 24, 24);
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/*Footer som har kontaktinformation på botten av hemsidan. Ger den en grå bakgrund som omfamnar informationen*/
+.footer {
+    display: block;
+    background:rgb(41, 41, 41);
+    padding-top: 15px;
+    padding-bottom: 30px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/*De som kallas "hero" nedan gör att texten på hero-image är centrerat*/
 .hero-image-container {
     position:relative;
-    text-align: center;
-    color: white;
 }
 
 .hero-image__image {
@@ -25,68 +70,91 @@ html {
     transform: translate(-50%,-50%);
 }
 
-/*Header*/
 h1 {
-    text-align: center;
     overflow: hidden;
     white-space: nowrap;
-    color: white;
     margin-top: 0;
 }   
 
+/*Olika varianter för paragraphs.*/
 p {
-    color:white;
     margin-left: 5%;
-    margin-right: 4%;
+    margin-right: 5%;
 }
 
-/*Bild på min kanin*/
-.kanin-bild {
+.p__justify {
+    text-align: justify;
+}
+
+.p__small {
+    font-size: 5px;
+}
+ 
+/*En mindre bild som används överst på dom flesta sidorna.*/
+.projekt__bild {
+    max-width: 360px;
+    max-height: 100%;
+}
+
+/*En ännu mindre bild som ligger överst på sidor*/
+.projekt__bild__small {
     object-fit: contain;
     display: block;
     max-width: 360px;
     max-height: 100%;
     margin-left: auto;
     margin-right: auto;
-}   
+}
 
-.om-mig__kaninbild1 {
-    max-width: 360px;
-    max-height: 100%;
+/*Skapar en "card" liknande effekt som omsluter projektinformation i separata, lättnavigerade lådor*/
+.projekt__container {
+    background:rgb(41, 41, 41);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 60px;
+    
+    box-shadow: 10px 10px 3px 3px black;
 
-    object-fit: contain;
-    display: block;
+    max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-}
-.main-content{
-    display:flex;
-    flex-direction:row;
+    display: block;
 }
 
-.page-content {
-    order: 2;
-    flex-grow: 2;
-    margin-left: 20%;
-    min-height: 100vh;
+/*Bild på projektet i containern*/
+.projekt__container__bild {
+    max-width: 100%;
+    height: auto;
 }
 
+/*Flexbox row som separerar olika uppställningar av bilder med ett mellanrum som är lika stort emellan som på sidorna.*/
 .kanin-bilder{
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
+/*En flexbox column som automatisk skalar ner bilderna till samma bredd, för att kunna visa bilderna i ett löpande band*/
 .kanin-bilder__column {
     display:flex;
     flex-direction: column;
     
-    max-width: 200px;
-    width: 100%;
+    max-width: 300px;
+    min-width: 100px;
+    width: 30%;
+
+
     margin-right: 2%;
+
+    gap: 10px;
 }
 
-/*Konfigurerar nav-barens utseende*/
+/*Gör textfärgen i input-lådorna svart*/
+input{
+    color: black;
+}
+
+/*Vertikal nav-bar som sitter på skärmens sida. */
 .nav-bar {
     order: 1;
 
@@ -98,7 +166,18 @@ p {
     width: 20%;
     height: 100%;
     
-    background-image: linear-gradient(rgb(14, 13, 13),rgb(41, 41, 41));
+    background-image: linear-gradient(to bottom,rgb(14, 13, 13),rgb(41, 41, 41));
+}
+
+/*Ger tabsen i nav-baren tydligare text med skugga och hindrar dom från att överflöda om skärmen är för liten.*/
+.nav-bar__tab {
+    flex-grow: 1;
+
+    font-size: 15px;
+    text-shadow: 2px 2px #343030;
+
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /*Konfigurerar knappens utseende så att den inte syns*/
@@ -108,26 +187,12 @@ button {
     background-color: inherit;
 }
 
-/*Konfigurerar innehållet i navbaren*/
-.nav-bar__tab {
-    font-size: 15px;
-    color: white;
-    text-shadow: 2px 2px #343030;
-
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;    
-    
-    padding-top: 30px;
-    padding-bottom: 30px;   
-}
-
 /*Visar vilket alternativ man redan är på med en unik färg*/
 .active {
     background-color: rgb(72, 68, 68);;
     transition: 0.5s;
 }  
-
+/*Ger en effekt när man hoverar över ett alternativ i nav-baren med musen*/
 button:hover {
     background-color: rgb(50, 47, 47);;
     transition: 0.3s;

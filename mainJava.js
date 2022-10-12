@@ -1,7 +1,7 @@
 function openTab(evt,tabName){
     //Variabler
     var i, tabcontent, tablinks;
-    
+
     //Tar alla element som ingår i classen "tabcontent" och gömmer dom
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {

@@ -1,65 +1,121 @@
 <html lang="sv">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<!--Kopplar min css- och javascript-fil med htmlfilen-->
 <link rel="stylesheet" href="mainCss.css">
-<script src="mainJava.js">
-</script>
+<script src="mainJava.js"></script>
+
     <body>
+        <!--Denna div är bara för att samla ihop allt i bodyn med en gemensam class-->
         <div class="main-content">
+            <!--En div för min navbar på vänster sida av skärmen. Varje knapp är kopplad med min javascript kod som byter innehållet i page-content diven-->
             <div class="nav-bar">  
                 <button class="nav-bar__tab" onclick="openTab(event, 'Hem')" id="defaultOpen">Hem</button>
-                <button class="nav-bar__tab" onclick="openTab(event, 'Projekt')">Mina projekt</button>
+                <button class="nav-bar__tab" onclick="openTab(event, 'Projekt')">Projekt</button>
                 <button class="nav-bar__tab" onclick="openTab(event, 'Om mig')">Om mig</button>
                 <button class="nav-bar__tab" onclick="openTab(event, 'Kontakt')">Kontakt</button>
-                <button class="nav-bar__tab" onclick="openTab(event, 'Kanin bilder')">Kanin bilder</button>
+                <button class="nav-bar__tab" onclick="openTab(event, 'Kaniner')">Kaniner</button>
             </div>
 
+            <!--Diven har sidans olika innehåll, som korresponderar till vilken tab i navbaren du är på.-->
             <div class="page-content">
 
+                <!--Alla dessa divs är för de olika sidorn på hemsidan, som byts av javascriptkoden och kontrolleras av navbaren.-->
+                <!--Hem-paget-->
                 <div id="Hem" class="tabcontent">
                     <div class="hero-image-container">
-                        <img src="Kanin.jpg" alt="" class="hero-image__image">
-                            <div class="hero-image__text"><h1>Me rabbit</h1></div>
+                        <img src="Bilder\HeroImage.jpg" alt="" class="hero-image__image">
+                            <div class="hero-image__text"><h1>Min portfolio</h1></div>
                     </div>
                 </div>
 
+                <!--Projekt-paget-->
                 <div id="Projekt" class="tabcontent">
-                    <h1>Mina Projekt</h1>
-                    <img src="Bilder\Stampe5.jpeg" class="om-mig__kaninbild1" alt="Bild på en söt, grå kanin">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur saepe accusantium, dolores, excepturi quod ullam dignissimos ducimus facilis esse neque voluptatem sed qui earum in cumque magni quia nesciunt dolore?</p>
+                    <h1 class="header">Mina projekt</h1>
+                    <img src="Bilder\Stampe5.jpeg" class="projekt__bild" alt="Bild på en söt, grå kanin som utsöndrar stålthet">
+                    <h2>Välkommen till min projektsida!</h2>
+                    <p>Här nedan så finns information om tidigare projekt som jag arbetat på.</p>
+                    <div class="projekt__container">
+                        <img src="Bilder\Gymnasiespel1.png" class="projekt__container__bild" alt="En bild från ett spel i pixel-art stil med en kanin som spelarkaraktär. ">
+                        <h2>Untitled</h2>
+                        <h3>RPG med turn-based combat</h3>
+                        <p class="p__justify">Detta är mitt gymnasieprojekt. Tanken är att det ska vara likt Pokemon, i att du har en värld att utforska med
+                        fiender som du kommer behöva bekämpa. Detta projekt jobbar jag på själv, med mycket inspiration taget från videor och andras projekt på internet.</p>
+                    </div>
                 </div>
 
+                <!--Om-mig-paget-->
                 <div id="Om mig" class="tabcontent">
-                    <h1>Om mig</h1>
-                    <img src="Bilder\Leonard2.jpg" class="kanin-bild" alt="Ough">
+                    <h1 class="header">Om mig</h1>
+                    <img src="Bilder\Leonard2.jpg" class="projekt__bild__small" alt="Ough">
+                    <p class="p__justify">Hej! Jag heter Oliver och är den som har skapat denna fina hemsida.</p>
                 </div>
 
+                <!--Kontakt-paget-->
                 <div id="Kontakt" class="tabcontent">
-                    <h1>Kontaktinfo</h1>
-                    <img src="Bilder\Leonard1.JPG" class="kanin-bild" alt="Ough">
+                    <h1 class="header">Kontakt</h1>
+                    <img src="Bilder\Leonard1.JPG" class="projekt__bild__small" alt="Ough">
+
+                    <!--Fake kontaktformulär som gör absolut ingenting utöver att ge illusionen av att du åstadkommer något-->
+                    <form>
+                        <label for="name">För- och efternamn</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="telenumber">Telefonnummer:</label><br>
+                        <input type="number" id="telenumber" name="telenumber"><br><br>
+                        <label for="message">Ditt meddelande:</label><br>
+                        <input type="text" id="message" name="message"><br><br>
+                        <input type="submit" value="Skicka">
+                    </form>
                 </div>
                 
-                <div id="Kanin bilder" class="tabcontent">
-                    <h1>Bilder på mina två kaniner</h1>
-
+                <!--Kaninbilder-paget-->
+                <div id="Kaniner" class="tabcontent">
+                    <h1 class="header">Bilder på mina två fina kaniner</h1>
+                    <!--Flexboxdiv som fördelar bildkolumnerna jämt på hemsidan-->
                     <div class="kanin-bilder">
+
+                        <!--2 flexbox-kolumner för bilderna att förvaras i-->
                         <div class="kanin-bilder__column">
-                            <img src="Bilder\Stampe1.jpg" alt="test">
+                            <img src="Bilder\Maräng1.jpg" alt="En bild på en söt bruntäcknad vädurkanin som sitter på en våt träaltan">
+                            <img src="Bilder\Maräng2.jpg" alt="test">
+                            <img src="Bilder\MarängStampe1.jpg" alt="test">
+                            <img src="Bilder\Maräng3.jpeg" alt="test">
+                            <img src="Bilder\Maräng4.jpg" alt="test">
+                            <img src="Bilder\Maräng5.jpg" alt="test">
+                            <img src="Bilder\Maräng6.jpg" alt="test">
+                            <img src="Bilder\Maräng7.jpg" alt="test">
+                            <img src="Bilder\Maräng8.jpeg" alt="test">
+                            <img src="Bilder\MarängStampe2.jpg" alt="test">
                         </div>
 
                         <div class="kanin-bilder__column">
                             <img src="Bilder\Stampe1.jpg" alt="test">
+                            <img src="Bilder\MarängStampe3.jpg" alt="test">
                             <img src="Bilder\Stampe2.jpg" alt="test">
                             <img src="Bilder\Stampe3.jpg" alt="test">
-
+                            <img src="Bilder\Stampe4.jpg" alt="test">
+                            <img src="Bilder\Stampe5.jpeg" alt="test">
+                            <img src="Bilder\Stampe6.jpg" alt="test">
+                            <img src="Bilder\Stampe7.jpg" alt="test">
+                            <img src="Bilder\Stampe8.jpg" alt="test">
+                            <img src="Bilder\Stampe9.jpg" alt="test">
+                            <img src="Bilder\Stampe10.jpeg" alt="test">
                         </div>
 
                     </div>
 
                 </div>
-                
+
+                <!--Footer med kontaktinfo som finns på alla sidor-->
+                <div class="footer">
+                    <h1>Kontaktinfo</h1>
+                    <p class="p__justify">Email: 20olos@stockholmscience.se <br> Telefon: 077-173 73 00</p>
+                    <p class="p__small">Ring inte telefonnummret det är en skam</p>
+                </div>
             </div>
         </div>
     </body>
+<!--Tvingar javascripten att visa förstasidan-->
 <script> document.getElementById("defaultOpen").click();
 </script>
 </html>
