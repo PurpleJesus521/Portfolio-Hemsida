@@ -1,3 +1,4 @@
+/*Denna kod gör att sidans innehåll byts ut, kontrollerat av det alternativ du valt i nav-baren.*/
 function openTab(evt,tabName){
     //Variabler
     var i, tabcontent, tablinks;
